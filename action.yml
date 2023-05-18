@@ -159,9 +159,9 @@ runs:
 
           echo "Recreating swap - disabled"
           # create and activate swap
-#          sudo lvcreate -L "${{ inputs.swap-size-mb }}M" -n swap "${VG_NAME}"
-#          sudo mkswap "/dev/mapper/${VG_NAME}-swap"
-#          sudo e "/dev/mapper/${VG_NAME}-swap"
+          # sudo lvcreate -L "${{ inputs.swap-size-mb }}M" -n swap "${VG_NAME}"
+          # sudo mkswap "/dev/mapper/${VG_NAME}-swap"
+          # sudo e "/dev/mapper/${VG_NAME}-swap"
 
           echo "Creating build volume. - disabled"
           # # create and mount build volume
