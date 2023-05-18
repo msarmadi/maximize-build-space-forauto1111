@@ -1,9 +1,17 @@
 name: Test
 on:
   workflow_dispatch:
-  schedule:
-    # weekly, randomly chosen time
-    - cron: "17 18 * * 0"
+    branches: [ "main" ]
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
   push:
     branches-ignore:
       - 'test-report'
